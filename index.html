@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="styles.css">
+    <title>Contact Form</title>
+</head>
+<body>
+    <!-- Use "method='POST'" so data isn't exposed in the URL -->
+   <!-- <form action="https://william-projects.app.n8n.cloud/webhook/eb2dc26d-24f0-4283-bc5d-878ef7ea1826" method="POST"> --> 
+     <form id="contactForm" >
+        <div>
+            <label for="email">Email:</label>
+            <!-- Changed type to "email" for built-in browser validation -->
+            <input type="email" id="email" name="email" required>
+        </div>
+ <div>
+    <label for ="subject">Subject:</label>
+      
+            <input type="subject" id="subject" name="subject" required>
+ </div>
+
+        <div>
+            <label for="message">Message:</label>
+            <!-- Used <textarea> for longer messages -->
+            <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+
+        <button type="submit" id="submitBtn">Submit</button>
+         <div id="formResponse" class="hidden"></div>
+    </form>
+   
+    <script src="script.js"></script>
+</body>
+</html>
